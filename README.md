@@ -31,6 +31,109 @@ SherlockChain's AI integration brings several advanced capabilities to the table
 2. **Automated Remediation Suggestions**: The AI component suggests potential fixes and code modifications to address identified vulnerabilities, accelerating the remediation process.
 3. **Proactive Security Auditing**: SherlockChain's AI models continuously monitor your codebase, proactively identifying emerging threats and providing early warning signals.
 4. **Natural Language Interaction**: Users can interact with SherlockChain using natural language, allowing them to query the tool, request specific analyses, and receive detailed responses.
+he `--help` command in the SherlockChain framework provides a comprehensive overview of all the available options and features. It includes information on:
+
+- **Vulnerability Detection**: The `--detect` and `--exclude-detectors` options allow users to specify which vulnerability detectors to run, including both built-in and AI-powered detectors.
+- **Reporting**: The `--report-format`, `--report-output`, and various `--report-*` options control how the analysis results are reported, including the ability to generate reports in different formats (JSON, Markdown, SARIF, etc.).
+- **Filtering**: The `--filter-*` options enable users to filter the reported issues based on severity, impact, confidence, and other criteria.
+- **AI Integration**: The `--ai-*` options allow users to configure and control the AI-powered features of SherlockChain, such as prioritizing high-impact vulnerabilities, enabling specific AI detectors, and managing AI model configurations.
+- **Integration with Development Frameworks**: Options like `--truffle` and `--truffle-build-directory` facilitate the integration of SherlockChain into popular development frameworks like Truffle.
+- **Miscellaneous Options**: Additional options for compiling contracts, listing detectors, and customizing the analysis process.
+
+The `--help` command provides a detailed explanation of each option, its purpose, and how to use it, making it a valuable resource for users to quickly understand and leverage the full capabilities of the SherlockChain framework.
+
+Example usage:
+
+```bash
+sherlockchain --help
+```
+
+This will display the comprehensive usage guide for the SherlockChain framework, including all available options and their descriptions.
+```bash
+usage: sherlockchain [-h] [--version] [--solc-remaps SOLC_REMAPS] [--solc-settings SOLC_SETTINGS]
+                    [--solc-version SOLC_VERSION] [--truffle] [--truffle-build-directory TRUFFLE_BUILD_DIRECTORY]
+                    [--truffle-config-file TRUFFLE_CONFIG_FILE] [--compile] [--list-detectors]
+                    [--list-detectors-info] [--detect DETECTORS] [--exclude-detectors EXCLUDE_DETECTORS]
+                    [--print-issues] [--json] [--markdown] [--sarif] [--text] [--zip] [--output OUTPUT]
+                    [--filter-paths FILTER_PATHS] [--filter-paths-exclude FILTER_PATHS_EXCLUDE]
+                    [--filter-contracts FILTER_CONTRACTS] [--filter-contracts-exclude FILTER_CONTRACTS_EXCLUDE]
+                    [--filter-severity FILTER_SEVERITY] [--filter-impact FILTER_IMPACT]
+                    [--filter-confidence FILTER_CONFIDENCE] [--filter-check-suicidal]
+                    [--filter-check-upgradeable] [--filter-check-erc20] [--filter-check-erc721]
+                    [--filter-check-reentrancy] [--filter-check-gas-optimization] [--filter-check-code-quality]
+                    [--filter-check-best-practices] [--filter-check-ai-detectors] [--filter-check-all]
+                    [--filter-check-none] [--check-all] [--check-suicidal] [--check-upgradeable]
+                    [--check-erc20] [--check-erc721] [--check-reentrancy] [--check-gas-optimization]
+                    [--check-code-quality] [--check-best-practices] [--check-ai-detectors] [--check-none]
+                    [--check-all-detectors] [--check-all-severity] [--check-all-impact] [--check-all-confidence]
+                    [--check-all-categories] [--check-all-filters] [--check-all-options] [--check-all]
+                    [--check-none] [--report-format {json,markdown,sarif,text,zip}] [--report-output OUTPUT]
+                    [--report-severity REPORT_SEVERITY] [--report-impact REPORT_IMPACT]
+                    [--report-confidence REPORT_CONFIDENCE] [--report-check-suicidal]
+                    [--report-check-upgradeable] [--report-check-erc20] [--report-check-erc721]
+                    [--report-check-reentrancy] [--report-check-gas-optimization] [--report-check-code-quality]
+                    [--report-check-best-practices] [--report-check-ai-detectors] [--report-check-all]
+                    [--report-check-none] [--report-all] [--report-suicidal] [--report-upgradeable]
+                    [--report-erc20] [--report-erc721] [--report-reentrancy] [--report-gas-optimization]
+                    [--report-code-quality] [--report-best-practices] [--report-ai-detectors] [--report-none]
+                    [--report-all-detectors] [--report-all-severity] [--report-all-impact]
+                    [--report-all-confidence] [--report-all-categories] [--report-all-filters]
+                    [--report-all-options] [--report-all] [--report-none] [--ai-enabled] [--ai-disabled]
+                    [--ai-priority-high] [--ai-priority-medium] [--ai-priority-low] [--ai-priority-all]
+                    [--ai-priority-none] [--ai-confidence-high] [--ai-confidence-medium] [--ai-confidence-low]
+                    [--ai-confidence-all] [--ai-confidence-none] [--ai-detectors-all] [--ai-detectors-none]
+                    [--ai-detectors-specific AI_DETECTORS_SPECIFIC] [--ai-detectors-exclude AI_DETECTORS_EXCLUDE]
+                    [--ai-models-path AI_MODELS_PATH] [--ai-models-update] [--ai-models-download]
+                    [--ai-models-list] [--ai-models-info] [--ai-models-version] [--ai-models-check]
+                    [--ai-models-upgrade] [--ai-models-remove] [--ai-models-clean] [--ai-models-reset]
+                    [--ai-models-backup] [--ai-models-restore] [--ai-models-export] [--ai-models-import]
+                    [--ai-models-config AI_MODELS_CONFIG] [--ai-models-config-update] [--ai-models-config-reset]
+                    [--ai-models-config-export] [--ai-models-config-import] [--ai-models-config-list]
+                    [--ai-models-config-info] [--ai-models-config-version] [--ai-models-config-check]
+                    [--ai-models-config-upgrade] [--ai-models-config-remove] [--ai-models-config-clean]
+                    [--ai-models-config-reset] [--ai-models-config-backup] [--ai-models-config-restore]
+                    [--ai-models-config-export] [--ai-models-config-import] [--ai-models-config-path AI_MODELS_CONFIG_PATH]
+                    [--ai-models-config-file AI_MODELS_CONFIG_FILE] [--ai-models-config-url AI_MODELS_CONFIG_URL]
+                    [--ai-models-config-name AI_MODELS_CONFIG_NAME] [--ai-models-config-description AI_MODELS_CONFIG_DESCRIPTION]
+                    [--ai-models-config-version-major AI_MODELS_CONFIG_VERSION_MAJOR]
+                    [--ai-models-config-version-minor AI_MODELS_CONFIG_VERSION_MINOR]
+                    [--ai-models-config-version-patch AI_MODELS_CONFIG_VERSION_PATCH]
+                    [--ai-models-config-author AI_MODELS_CONFIG_AUTHOR]
+                    [--ai-models-config-license AI_MODELS_CONFIG_LICENSE]
+                    [--ai-models-config-url-documentation AI_MODELS_CONFIG_URL_DOCUMENTATION]
+                    [--ai-models-config-url-source AI_MODELS_CONFIG_URL_SOURCE]
+                    [--ai-models-config-url-issues AI_MODELS_CONFIG_URL_ISSUES]
+                    [--ai-models-config-url-changelog AI_MODELS_CONFIG_URL_CHANGELOG]
+                    [--ai-models-config-url-support AI_MODELS_CONFIG_URL_SUPPORT]
+                    [--ai-models-config-url-website AI_MODELS_CONFIG_URL_WEBSITE]
+                    [--ai-models-config-url-logo AI_MODELS_CONFIG_URL_LOGO]
+                    [--ai-models-config-url-icon AI_MODELS_CONFIG_URL_ICON]
+                    [--ai-models-config-url-banner AI_MODELS_CONFIG_URL_BANNER]
+                    [--ai-models-config-url-screenshot AI_MODELS_CONFIG_URL_SCREENSHOT]
+                    [--ai-models-config-url-video AI_MODELS_CONFIG_URL_VIDEO]
+                    [--ai-models-config-url-demo AI_MODELS_CONFIG_URL_DEMO]
+                    [--ai-models-config-url-documentation-api AI_MODELS_CONFIG_URL_DOCUMENTATION_API]
+                    [--ai-models-config-url-documentation-user AI_MODELS_CONFIG_URL_DOCUMENTATION_USER]
+                    [--ai-models-config-url-documentation-developer AI_MODELS_CONFIG_URL_DOCUMENTATION_DEVELOPER]
+                    [--ai-models-config-url-documentation-faq AI_MODELS_CONFIG_URL_DOCUMENTATION_FAQ]
+                    [--ai-models-config-url-documentation-tutorial AI_MODELS_CONFIG_URL_DOCUMENTATION_TUTORIAL]
+                    [--ai-models-config-url-documentation-guide AI_MODELS_CONFIG_URL_DOCUMENTATION_GUIDE]
+                    [--ai-models-config-url-documentation-whitepaper AI_MODELS_CONFIG_URL_DOCUMENTATION_WHITEPAPER]
+                    [--ai-models-config-url-documentation-roadmap AI_MODELS_CONFIG_URL_DOCUMENTATION_ROADMAP]
+                    [--ai-models-config-url-documentation-blog AI_MODELS_CONFIG_URL_DOCUMENTATION_BLOG]
+                    [--ai-models-config-url-documentation-community AI_MODELS_CONFIG_URL_DOCUMENTATION_COMMUNITY]
+```
+This comprehensive usage guide provides information on all the available options and features of the SherlockChain framework, including:
+
+- Vulnerability detection options: `--detect`, `--exclude-detectors`
+- Reporting options: `--report-format`, `--report-output`, `--report-*`
+- Filtering options: `--filter-*`
+- AI integration options: `--ai-*`
+- Integration with development frameworks: `--truffle`, `--truffle-build-directory`
+- Miscellaneous options: `--compile`, `--list-detectors`, `--list-detectors-info`
+
+By reviewing this comprehensive usage guide, you can quickly understand how to leverage the full capabilities of the SherlockChain framework to analyze your smart contracts and identify potential vulnerabilities. This will help you ensure the security and reliability of your DeFi protocol before deployment.
+
 ## AI-Powered Detectors
 
 Num | Detector | What it Detects | Impact | Confidence
