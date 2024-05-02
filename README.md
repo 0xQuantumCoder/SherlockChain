@@ -1,4 +1,4 @@
-# SherlockChain: A Powerful Smart Contract Analysis Framework
+# SherlockChain: A Powerful AI Smart Contract Analysis Framework
 <center>
 <img src="https://i.ibb.co/y4187Bq/DALL-E-2024-05-02-21-17-35-Create-a-logo-for-Sherlock-Chain-ensuring-the-text-is-divided-into-two-li.webp" alt="SherlockChain Static Analysis Framework Logo" width="250" /></center>
 
